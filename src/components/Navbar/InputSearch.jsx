@@ -20,12 +20,12 @@ export default function InputSearch() {
       <input
         type="text"
         placeholder="Search"
-        className=" w-fullborder mt-3 border-black p-2 rounded md:mt-0"
+        className=" w-fullborder mt-3 border-black p-3 rounded md:mt-0"
         ref={searchRef}
         onKeyDown={handleSearch}
       />
       <button
-        className="absolute md:top-1.5 md:end-2 top-3.5 end-2"
+        className="absolute md:top-1.5 md:end-2 top-5 end-2"
         onClick={handleSearch}
       >
         <MagnifyingGlass size={32} />
