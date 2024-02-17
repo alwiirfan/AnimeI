@@ -3,6 +3,7 @@
 import AnimeList from "@/components/AnimeList";
 import HeaderMenu from "@/components/Utilities/HeaderMenu";
 import Pagination from "@/components/Utilities/Pagination";
+import { getAnimesResponse } from "@/libs/api-libs";
 import { useEffect, useState } from "react";
 
 export default function Populer() {
@@ -11,10 +12,7 @@ export default function Populer() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?page=${page}`
-      );
-      const populerAnime = await response.json();
+      const populerAnime = await getAnimesResponse("top/anime", `page=${page}`);
       setData(populerAnime);
     }
 

@@ -4,11 +4,11 @@ import Image from "next/image";
 export default function AnimeList({ api }) {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4">
-      {api.data?.map((anime) => {
+      {api.data?.map((anime, index) => {
         return (
           <Link
-            key={anime.mal_id}
-            href={`/${anime.mal_id}`}
+            key={index}
+            href={`/anime/${anime.mal_id}`}
             className="cursor-pointer hover:text-color-accent text-color-primary transition-all"
           >
             <Image
