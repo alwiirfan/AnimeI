@@ -5,7 +5,7 @@ import React from "react";
 
 export default async function Page({ params: { id } }) {
   const anime = await getAnimesResponse(`anime/${id}`);
-  console.log(anime);
+
   return (
     <>
       <div className="pt-4 px-4">

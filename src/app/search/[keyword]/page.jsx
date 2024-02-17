@@ -4,7 +4,6 @@ import { getAnimesResponse } from "@/libs/api-libs";
 
 export default async function SearchPage({ params }) {
   const { keyword } = params;
-
   const decodedKeyword = decodeURI(keyword);
 
   const searchAnime = await getAnimesResponse("anime", `q=${decodedKeyword}`);
